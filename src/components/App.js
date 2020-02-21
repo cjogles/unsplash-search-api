@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SearchBar from "./SearchBar";
 import ImageList from "./ImageList";
 import unsplash from "./api/unsplash";
-import './css/index.css';
+import "./css/index.css";
 
 function App() {
   const [images, setImages] = useState([]);
@@ -18,25 +18,26 @@ function App() {
   };
 
   return (
-    <div className="app">
-      <div className="div1">
-        <p>Unsplash Photo Engine</p>
+    <>
+      <div className="app">
+        <div className="div1">
+          <p>Unsplash Photo Engine</p>
+        </div>
+        <SearchBar
+          // pass current search query and setSearch function. pass onSearchSubmit to invoke upon form submission
+          search={search}
+          setSearch={setSearch}
+          onSearchSubmit={onSearchSubmit}
+        />
+        <div className="div2">
+          <p>API Traversal</p>
+        </div>
       </div>
-      <SearchBar
-        // pass current search query and setSearch function. pass onSearchSubmit to invoke upon form submission
-        search={search}
-        setSearch={setSearch}
-        // onSearchSubmit={onSearchSubmit}
-      />
-      
-      <ImageList 
+      <ImageList
         // pass images state to create image cards
-        images={images} 
+        images={images}
       />
-      <div className="div2">
-        <p>API Traversal</p>
-      </div>
-    </div>
+    </>
   );
 }
 

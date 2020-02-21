@@ -1,15 +1,16 @@
-import React from 'react';
-import Image from './Image';
+import React from "react";
+import Image from "./Image";
 
-function ImageList(props){
-
-  return(
+function ImageList(props) {
+  return (
     <>
-      {props.images.map(image => {
-        return <Image image={image} />
-  })}
+      <div className="imageList">
+        {props.images.map(image => {
+          return <Image image={image} />;
+        })}
+      </div>
     </>
   );
-};
+}
 
 export default ImageList;

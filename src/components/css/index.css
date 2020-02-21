@@ -52,3 +52,14 @@ form {
     margin-top: 0;
   }
 }
+div.imageList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  vertical-align: center;
+}
+div.images {
+  display: flex;
+  align-items: center;
+}

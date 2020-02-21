@@ -1,6 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 
+const Nav = styled.nav`
+  display: flex;
+  justify-content: center;
+`;
+
+const SubmitButton = styled.div`
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+`;
+
+const SearchBarDiv = styled.div`
+  padding: 1rem;
+`;
+
 function SearchBar(props) {
   const onInputChange = e => {
     props.setSearch(e.target.value);
@@ -14,21 +29,6 @@ function SearchBar(props) {
     console.log(e.target.value);
   };
 
-  const Nav = styled.nav`
-    display: flex;
-    justify-content: center;
-  `;
-
-  const SubmitButton = styled.div`
-    background-color: white;
-    padding: 1rem;
-    border-radius: 5px;
-  `;
-
-  const SearchBar = styled.div`
-    padding: 1rem;
-
-  `;
   return (
     <Nav>
       <form
@@ -37,25 +37,24 @@ function SearchBar(props) {
         style={{ display: "flex" }}
         onSubmit={e => onFormSubmit(e)}
       >
-        <SearchBar>
+        <SearchBarDiv>
           <input
             className="searchBar"
             type="search"
             value={props.search}
             onChange={e => onInputChange(e)}
           />
-        </SearchBar>
+        </SearchBarDiv>
         <SubmitButton>
           <input
             className="submitButton"
             type="submit"
             value="Search"
             style={{
-              
               borderStyle: "dashed",
               borderRadius: "5px",
               borderColor: "black",
-              height: '1.9rem',
+              height: "1.9rem"
             }}
           />
         </SubmitButton>
