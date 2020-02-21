@@ -1,0 +1,25 @@
+.app {
+  display: flex;
+  justify-content: space-evenly;
+  border: solid black;
+  @media @extra-large {
+    flex-direction:column;
+  }
+  .div1 p {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+
+    @media @medium {
+      font-size: 1rem;
+    }
+  }
+  .div2 p {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+    @media @medium {
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.app {
+  display: flex;
+  justify-content: space-evenly;
+  border: solid black;
+}
+@media (max-width:1000px) {
+  .app {
+    flex-direction: column;
+  }
+}
+.app .div1 p {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+}
+@media (max-width:500px) {
+  .app .div1 p {
+    font-size: 1rem;
+  }
+}
+.app .div2 p {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+}
+@media (max-width:500px) {
+  .app .div2 p {
+    font-size: 1rem;
+  }
+}
+.submitButton:hover {
+  background-color: lightblue;
+}
+.searchBar:hover {
+  background-color: lightblue;
+  border-style: dotted;
+}
+.searchBar {
+  width: 20rem;
+  height: 1.9rem;
+}
+@media (max-width:500px) {
+  .searchBar {
+    width: 5rem;
+  }
+}
+form {
+  margin-top: 1rem;
+}
+@media (max-width:500px) {
+  form {
+    margin-top: 0;
+  }
+}
